@@ -6,20 +6,12 @@
 static int bumper_open(struct inode *node, struct file *filp)
 {
 	printk(KERN_WARNING "open ...!\n");
-
 	return 0;
 }
 
 static ssize_t bumper_read(struct file *filp, char __user *buf, size_t size, loff_t *pos)
 {
-	// wait_event(key_q, key_num); //休眠 没有按下为0
-
-	//将key_value值返回给用户空间
 	printk(KERN_WARNING "bumper read\n");
-	// copy_to_user(buf, &key_num, 4); //buf为用户空间传过来的地址
-
-	// key_num = 0;
-
 	return 4;
 }
 
