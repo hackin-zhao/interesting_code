@@ -7,3 +7,4 @@ build
 *.order
 *.mod
 *.mod.c
+*.out
